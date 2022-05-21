@@ -1,0 +1,12 @@
+{
+  "name": "cv",
+  "version": "0.1.0",
+  "description": "This is my CV",
+  "scripts": {
+    "start": "npx development-server -o"
+  },
+  "author": "Ivan Timoshenko <tis1993@mail.ru>",
+  "devDependencies": {
+    "development-server": "git@github.com:itimoshenko/development-server.git#76e4b1c88a629c41803e499c5f5a80aade56e6ea"
+  }
+}
