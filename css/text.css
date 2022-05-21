@@ -1,0 +1,13 @@
+.text {
+  color: var(--color-2);
+}
+
+.text_bold {
+  font-weight: 400;
+
+  color: var(--color-1);
+}
+
+.text_light {
+  opacity: 0.75;
+}

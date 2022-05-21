@@ -3,10 +3,13 @@
   "version": "0.1.0",
   "description": "This is my CV",
   "scripts": {
-    "start": "npx development-server -o"
+    "build": "npx template-engine && npx builder",
+    "start": "npx template-engine -w & npx builder -w & npx development-server -o"
   },
   "author": "Ivan Timoshenko <tis1993@mail.ru>",
   "devDependencies": {
-    "development-server": "git@github.com:itimoshenko/development-server.git#76e4b1c88a629c41803e499c5f5a80aade56e6ea"
+    "development-server": "git@github.com:itimoshenko/development-server.git#4e02119025115c7500723266618a1c12cd7c86ae",
+    "template-engine": "git@github.com:itimoshenko/template-engine.git#4c336a8e6b4cd6e35e3705fdf5568e74cfab7f61",
+    "builder": "git@github.com:itimoshenko/builder.git#9fba3da7303bb7a05a9d3f5075a3bd9acb3010cb"
   }
 }

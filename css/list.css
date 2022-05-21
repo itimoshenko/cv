@@ -1,0 +1,20 @@
+.list {
+}
+
+.list__item {
+  position: relative;
+
+  list-style-type: none;
+}
+
+.list__item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: var(--default-border-radius);
+  height: var(--medium-size);
+  width: var(--medium-size);
+  background-color: var(--color-2);
+  left: calc(var(--large-size) * -1);
+  transform: translateY(50%) scale(0.75);
+}

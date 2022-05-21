@@ -1,0 +1,90 @@
+.link {
+  position: relative;
+
+  text-decoration: none;
+
+  color: var(--color-2);
+}
+
+.link__description {
+  position: absolute;
+
+  right: 0;
+
+  transform: translateX(100%);
+
+  padding-left: var(--small-size);
+}
+
+.link_centered {
+  display: flex;
+  align-items: center;
+}
+
+.link_linkedin::before,
+.link_site::before,
+.link_mail::before,
+.link_calendar::before,
+.link_github::before,
+.link_telegram::before,
+.link_phone::before,
+.link_location::before,
+.link_work::before,
+.link_relocation::before {
+  content: '';
+
+  display: inline-block;
+
+  margin-right: var(--medium-size);
+  padding: var(--medium-size);
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  transform: scale(0.80);
+}
+
+.link_telegram::before {
+  background-image: url('assets/telegram.svg');
+}
+
+.link_github::before {
+  background-image: url('assets/github.svg');
+}
+
+.link_calendar::before {
+  background-image: url('assets/calendar.svg');
+}
+
+.link_linkedin::before {
+  background-image: url('assets/linkedin.svg');
+}
+
+.link_site::before {
+  background-image: url('assets/site.svg');
+}
+
+.link_mail::before {
+  background-image: url('assets/mail.svg');
+}
+
+.link_phone::before {
+  background-image: url('assets/phone.svg');
+}
+
+.link_location::before {
+  background-image: url('assets/location.svg');
+}
+
+.link_work::before {
+  background-image: url('assets/work.svg');
+}
+
+.link_relocation::before {
+  background-image: url('assets/relocation.svg');
+}
+
+.link:hover {
+  color: var(--color-1);
+}

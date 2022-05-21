@@ -1,0 +1,5 @@
+{
+  "workDir": "./",
+  "exclude": ["node_modules", "git", "index.css"],
+  "watchDelay": 100
+}

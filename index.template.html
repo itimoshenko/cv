@@ -1,0 +1,243 @@
+${
+  (
+    scope.utils = {
+      formatDate: (date) => {
+        return new Date(date).toLocaleDateString('en', { year: 'numeric', month: 'long' })
+      },
+      formatPeriod: (startDate, endDate = new Date().toISOString()) => {
+        const sDate = new Date(startDate);
+        const eDate = new Date(endDate);
+
+        const fullMonthesCount = (eDate.getFullYear() - sDate.getFullYear()) * 12 + (eDate.getMonth() - sDate.getMonth()) + 1;
+        const yearsCount = Math.trunc(fullMonthesCount / 12);
+        const monthesCount = fullMonthesCount - yearsCount * 12;
+
+        const result = [];
+
+        if (yearsCount) {
+          result.push(yearsCount > 1 ? `${yearsCount} years` : '1 year');
+        }
+
+        if (monthesCount) {
+          result.push(monthesCount > 1 ? `${monthesCount} months` : '1 month');
+        }
+
+        return result.join(' ');
+      }
+    }
+  ) && ''
+}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="icon" href="assets/ico.svg">
+    <link rel="stylesheet" href="index.css">
+    <title>CV | ${scope.name} | ${scope.position}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="${scope.about.join('\n').replaceAll('{BOLD_BEGIN}', '').replaceAll('{BOLD_END}', '')}">
+    <meta property="og:title" content="CV | ${scope.name} | ${scope.position}">
+    <meta property="og:image" content="assets/avatar.jpeg">
+    <meta property="og:description" content="${scope.about.join('\n').replaceAll('{BOLD_BEGIN}', '').replaceAll('{BOLD_END}', '')}">
+    <script>
+      const handleDarkMode = () => {
+        const hours = new Date().getHours();
+
+        if (8 <= hours && hours <= 19) {
+          document.body.classList.remove('cv_dark');
+        } else {
+          document.body.classList.add('cv_dark');
+        }
+      };
+
+      window.addEventListener('load', handleDarkMode, false);
+      document.addEventListener("visibilitychange", handleDarkMode, false);
+    </script>
+  </head>
+  <body class="cv">
+    <section class="cv__main">
+      <img class="cv__avatar-img cv__avatar-img_mobile" width="100%" src="assets/avatar.jpeg" alt="Avatar">
+      <header class="cv__header">
+        <h1 class="cv__name">${scope.name}</h1>
+        <h2 class="cv__position">${scope.position}</h2>
+      </header>
+      <div class="cv__additionals cv__additionals_mobile">
+        <div class="cv__extra-info">
+          ${scope.extraInfos.map(info => `
+            <a class="link link_centered link_${info.type}" href="${info.link}">${info.displayLink}<span class="link__description">${info.description}</span></a>
+          `).join('')}
+        </div>
+        <section class="cv__contacts">
+          <h3 class="cv__title">Contacts</h3>
+          ${scope.contacts.map(contact => `
+            <a class="link link_centered link_${contact.type}" href="${contact.link}">${contact.displayLink}<span class="link__description">${contact.description}</span></a>
+          `).join('')}
+        </section>
+      </div>
+      <section class="cv__about">
+        <h3 class="cv__title">About</h3>
+        <div class="text cv__introduction">
+          ${scope.about.map(p => `
+            <p class="cv__introduction-paragraph">${p.join(' ').replaceAll('{BOLD_BEGIN}', '<b class=\"text text_bold\">').replaceAll('{BOLD_END}', '</b>')}</p>
+          `).join('')}
+        </div>
+      </section>
+      <div class="cv__additionals cv__additionals_mobile">
+        <section class="legend">
+          <h3 class="cv__title">Legend</h3>
+          <div>
+            <div><div class="legend-item legend-item_high"></div><span class="text text_bold"> — high level</span></div>
+            <div><div class="legend-item legend-item_medium"></div><span class="text"> — medium level</span></div>
+            <div><div class="legend-item legend-item_low"></div><span class="text text_light"> — low level</span></div>
+          </div>
+        </section>
+        ${scope.skills.map(skill => `
+          <section class="cv__skills">
+            <h3 class="cv__title">${skill.name}</h3>
+            <span class="text">
+              <span>
+                ${skill.strong.join(', ')}${skill.strong.length && (skill.medium.length || skill.low.length) ? ', ' : ''}
+              </span>
+              <span>
+                ${skill.medium.join(', ')}${skill.medium.length && skill.low.length ? ', ' : ''}
+              </span>
+              <span>
+                ${skill.low.join(', ')}
+              </span>
+            </span>
+          </section>
+        `).join('')}
+      </div>
+      <section class="cv__experience">
+        <h3 class="cv__title">Experience</h3>
+        ${scope.jobs.map(experience => `
+          <article class="experience ${experience.isLinkedWithPrevJob ? 'experience_with-path' : ''} ${experience.isIndirectLink ? 'experience_with-dashed-path' : ''}">
+            <header class="experience__header">
+              <h4 class="experience__position ${(experience.isLinkedWithPrevJob || experience.isLinkedWithNextJob) ? 'experience__position_with-point' : ''}">${experience.position}</h4>
+              <h5 class="experience__organization">
+                ${experience.company.name}${experience.company.site.displayLink ? ',' : ''}
+                <a class="link" href="${experience.company.site.link}">${experience.company.site.displayLink}</a>
+                <span class="experience__about">${experience.company.description}</span>
+              </h5>
+              <span class="experience__duration">
+                ${experience.startDate ? `
+                  <time datetime="${experience.startDate}">${scope.utils.formatDate(experience.startDate)}</time>
+                  <span>—</span>
+                  <time datetime="${experience.finishDate || [new Date().toISOString().split('T')[0], '00:00:00.000Z'].join('T')}">${experience.finishDate ? scope.utils.formatDate(experience.finishDate) : 'Now'}</time>,
+                  <span>${scope.utils.formatPeriod(experience.startDate, experience.finishDate || [new Date().toISOString().split('T')[0], '00:00:00.000Z'].join('T'))}</span>
+                ` : ``}
+              </span>
+            </header>
+            <div class="experience__experience">
+              ${experience.activities.map(activity => `
+                <article class="experience__activity">
+                  <header>
+                    <h5>${activity.name}</h5>
+                  </header>
+                  <ul class="list">
+                    ${activity.achievements.filter(achievement => !achievement.rate || achievement.rate >= scope.meta.achievementRate).map((achievement) => `
+                      <li class="list__item">
+                        ${achievement.description}
+                      </li>
+                    `).join('')}
+                  </ul>
+                  <span class="experience__skills">
+                    ${activity.skills.length ? `<b>Tech Stack</b>: ${activity.skills.join(', ')}`: ''}
+                  </span>
+                </article>
+              `).join('')}
+            </div>
+          </article>
+        `).join('')}
+      </section>
+      <section class="cv__experience">
+        <h3 class="cv__title">Education</h3>
+        ${scope.educations.map(education => `
+          <article class="experience">
+            <header class="experience__header">
+              <h4 class="experience__position">${education.degree}</h4>
+              <h5 class="experience__organization">${education.establishment.name}, <a class="link" href="${education.establishment.site.link}">${education.establishment.site.displayLink}</a></h5>
+            </header>
+            <span class="experience__duration">
+              <time datetime="${education.startDate}">${scope.utils.formatDate(education.startDate)}</time>
+              <span>—</span>
+              <time datetime="${education.finishDate}">${scope.utils.formatDate(education.finishDate)}</time>
+            </span>
+          </article>
+        `).join('')}
+      </section>
+    </section>
+    <div class="cv__additionals">
+      <img class="cv__avatar-img" width="100%" src="assets/avatar.jpeg" alt="Avatar">
+      <div class="cv__extra-info">
+        ${scope.extraInfos.map(info => `
+          <a class="link link_centered link_${info.type}" href="${info.link}">${info.displayLink}<span class="link__description">${info.description}</span></a>
+        `).join('')}
+      </div>
+      <section class="cv__contacts">
+        <h3 class="cv__title">Contacts</h3>
+        ${scope.contacts.map(contact => `
+          <a class="link link_centered link_${contact.type}" href="${contact.link}">${contact.displayLink}<span class="link__description">${contact.description}</span></a>
+        `).join('')}
+      </section>
+      <section class="legend">
+        <h3 class="cv__title">Legend</h3>
+        <div>
+          <div><div class="legend-item legend-item_high"></div><span class="text text_bold"> — high level</span></div>
+          <div><div class="legend-item legend-item_medium"></div><span class="text"> — medium level</span></div>
+          <div><div class="legend-item legend-item_low"></div><span class="text text_light"> — low level</span></div>
+        </div>
+      </section>
+      ${scope.skills.map(skill => `
+        <section class="cv__skills">
+          <h3 class="cv__title">${skill.name}</h3>
+          <span class="text">
+            <span>
+              ${skill.strong.join(', ')}${skill.strong.length && (skill.medium.length || skill.low.length) ? ', ' : ''}
+            </span>
+            <span>
+              ${skill.medium.join(', ')}${skill.medium.length && skill.low.length ? ', ' : ''}
+            </span>
+            <span>
+              ${skill.low.join(', ')}
+            </span>
+          </span>
+        </section>
+      `).join('')}
+    </div>
+    <!-- Yandex.Metrika counter -->
+    <script>
+      (function (d, w, c) {
+          (w[c] = w[c] || []).push(function() {
+              try {
+                  w.yaCounter90050132 = new Ya.Metrika({
+                      id:90050132,
+                      clickmap:true,
+                      trackLinks:true,
+                      accurateTrackBounce:true,
+                      webvisor:true
+                  });
+              } catch(e) { }
+          });
+
+          var n = d.getElementsByTagName("script")[0],
+              x = "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/watch.js",
+              s = d.createElement("script"),
+              f = function () { n.parentNode.insertBefore(s, n); }
+          for (var i = 0; i < document.scripts.length; i++) {
+              if (document.scripts[i].src === x) { return; }
+          }
+          s.type = "text/javascript";
+          s.async = true;
+          s.src = x;
+
+          if (w.opera == "[object Opera]") {
+              d.addEventListener("DOMContentLoaded", f, false);
+          } else { f(); }
+      })(document, window, "yandex_metrika_callbacks");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/90050132" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+    <!-- /Yandex.Metrika counter -->
+  </body>
+</html>

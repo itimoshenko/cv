@@ -1,0 +1,542 @@
+{
+  "meta": {
+    "achievementRate": 9
+  },
+  "name": "Иван Тимошенко",
+  "position": "Senior Frontend Developer",
+  "about": [
+    [
+      "Я фронтенд-разработчик с более чем 10-летним опытом, последние 5 лет работал в стартапах, но также имею опыт в крупных компаниях, таких как Яндекс и ПИК.",
+      "Благодаря этому я умею работать как в гибких, динамичных командах, так и в масштабных проектах с серьезными процессами."
+    ],
+    [
+      "Специализируюсь на экосистеме React, участвовал в разработке более 15 SPA, включая создание с нуля, а также разрабатывал REST-сервисы на Node.js."
+    ],
+    [
+      "Сейчас открыт к новым возможностям, где смогу применить свой опыт в развитии сложных веб-приложений. Буду рад обсудить, как могу быть полезен вашей компании."
+    ]
+  ],
+  "extraInfos": [
+    {
+      "type": "location",
+      "displayLink": "Москва",
+      "link": "",
+      "description": ""
+    }
+  ],
+  "contacts": [
+    {
+      "type": "phone",
+      "displayLink": "+7 901 344-80-29",
+      "link": "tel:+79013448029",
+      "description": ""
+    },
+    {
+      "type": "telegram",
+      "displayLink": "t.me/itimoshenko",
+      "link": "https://t.me/itimoshenko",
+      "description": ""
+    },
+    {
+      "type": "mail",
+      "displayLink": "job.tis@mail.ru",
+      "link": "mailto:job.tis@mail.ru",
+      "description": ""
+    },
+    {
+      "type": "linkedin",
+      "displayLink": "linkedin.com/in/istimoshenko",
+      "link": "https://www.linkedin.com/in/istimoshenko/?locale=en_US",
+      "description": ""
+    },
+    {
+      "type": "site",
+      "displayLink": "itimoshenko.github.io/cv/",
+      "link": "https://itimoshenko.github.io/cv/",
+      "description": ""
+    },
+    {
+      "type": "github",
+      "displayLink": "github.com/itimoshenko",
+      "link": "https://github.com/itimoshenko",
+      "description": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "",
+      "strong": ["JavaScript (TypeScript)", "HTML", "CSS", "NodeJS"],
+      "medium": [],
+      "low": []
+    },
+    {
+      "name": "JS Frameworks and Libs",
+      "strong": ["React", "NextJS", "Apollo GraphQL", "React Query", "Redux"],
+      "medium": [],
+      "low": []
+    },
+    {
+      "name": "NodeJS Frameworks, Libs and Db",
+      "strong": ["NestJS", "Express", "Fastify", "MongoDB"],
+      "medium": [],
+      "low": []
+    },
+    {
+      "name": "Testing",
+      "strong": ["Playwright", "Jest", "Cypress", "WebdriverIO"],
+      "medium": [],
+      "low": []
+    },
+    {
+      "name": "DevOps",
+      "strong": ["GitLab CI/CD", "Docker", "Docker Compose"],
+      "medium": [],
+      "low": []
+    }
+  ],
+  "jobs": [
+    {
+      "company": {
+        "name": "Startups",
+        "site": {
+          "displayLink": "",
+          "link": ""
+        },
+        "description": "Education technology, GameDev, Cybersecurity, Construction technology"
+      },
+      "position": "Senior Frontend Developer",
+      "startDate": "2020-03-01T00:00:00.000Z",
+      "finishDate": null,
+      "activities": [
+        {
+          "name": "EdTech Platform, Perlem, perlem.ai",
+          "achievements": [
+            {
+              "rate": 10,
+              "description": "Разработал и внедрил часть ключевой функциональности чатов на платформе, обеспечив возможность коммуникации между учителями и учениками. Это привело к увеличению среднего времени пребывания пользователей на платформе.",
+              "tags": []
+            },
+            {
+              "rate": 10,
+              "description": "Разработал и внедрил контекстные чаты, позволяющие учителям и ученикам обсуждать задания в привязке к их содержанию. Это повысило удобство коммуникации и, согласно предварительным данным, сократило среднее время выполнения заданий.",
+              "tags": []
+            },
+            {
+              "rate": 10,
+              "description": "Провел редизайн ключевых страниц платформы (диагностических работ, проверки заданий и заданий), что повысило удобство взаимодействия пользователей (учителей и учеников) с платформой.",
+              "tags": []
+            },
+            {
+              "rate": 9,
+              "description": "Добавил отображение статистики предыдущих лет, что позволило ученикам анализировать свой прогресс и повысило вовлеченность.",
+              "tags": []
+            },
+            {
+              "rate": 9,
+              "description": "Сделал ряд доработок страницы уведомлений, что позволило улучшить UI и UX.",
+              "tags": []
+            },
+            {
+              "rate": 9,
+              "description": "Реализовал механизм определения оффлайн-режима и соответствующих уведомлений, что повысило UX при работе с нестабильным интернетом на платформе.",
+              "tags": []
+            },
+            {
+              "rate": 9,
+              "description": "Реализовал систему модальных окон, что позволило использовать модальные окна более гибко и реализовывать более сложные сценарии, что улучшило DX.",
+              "tags": []
+            },
+            {
+              "rate": 9,
+              "description": "Организовал систему хранения иконок, перенес все иконки в одно место и реализовал Storybook для них, что улучшило DX и облегчило взаимодействие с дизайнерами.",
+              "tags": []
+            },
+            {
+              "rate": 8,
+              "description": "Реализовал переключение языков для приложения учителя.",
+              "tags": []
+            },
+            {
+              "rate": 8,
+              "description": "Реализовал хронология для экранов заданий и проверки заданий.",
+              "tags": []
+            },
+            {
+              "rate": 8,
+              "description": "Реализовал компонент загрузки файлов для UI-kit.",
+              "tags": []
+            },
+            {
+              "rate": 8,
+              "description": "Принял участие в ряде мероприятий по процессу улучшения стабильности и удобстве тестов.",
+              "tags": []
+            },
+            {
+              "rate": 8,
+              "description": "Реализовал несколько мелких улучшений по компонента UI-Kit'а, что позволило улучшить DX.",
+              "tags": []
+            },
+            {
+              "rate": 8,
+              "description": "Реализовал несколько мелких улучшений, которые позволили улучшить UX платформы в целом.",
+              "tags": []
+            }
+          ],
+          "skills": [
+            "React",
+            "TypeScript",
+            "React Query",
+            "Vite",
+            "Turborepo",
+            "Storybook"
+          ]
+        },
+        {
+          "name": "Content System, RedNeck Studio",
+          "achievements": [
+            {
+              "rate": 10,
+              "description": "С нуля спроектировал и реализовал контент-систему для игры, а также редакторы и админку для неё, что позволило стандартизировать жизненный цикл контента и наладить процесс публикации этого контента.",
+              "tags": []
+            }
+          ],
+          "skills": [
+            "TypeScript",
+            "NodeJS",
+            "Fastify",
+            "MongoDB",
+            "React",
+            "NextJS",
+            "Ant Design",
+            "Gitlab CI/CD",
+            "Docker",
+            "Docker Compose",
+            "Mocha"
+          ]
+        },
+        {
+          "name": "MMORPG game, RedNeck Studio",
+          "achievements": [
+            {
+              "rate": 10,
+              "description": "Разработал и запустил все фичи MVP, используя PIXI.JS, такие как PvP/GvG-бои, локации и инвентарь, что позволило успешно провести демо для инвесторов.",
+              "tags": ["PIXI.JS", "MVP", "Investment"]
+            },
+            {
+              "rate": 10,
+              "description": "Внедрил и переработал модуль боя в соответствии с новыми требованиями, что повысило его эффективность и масштабируемость, обеспечив успешность MVP.",
+              "tags": ["PIXI.JS", "MVP", "Redesign", "Scalability"]
+            },
+            {
+              "rate": 7,
+              "description": "Помог команде Unity в создании альтернативной реализации модуля боя на C# для A/B-тестирования, что привело к ощутимой экономии средств и повысило эффективность разработки продукта.",
+              "tags": ["C#", "Unity", "A/B testing", "Cost savings"]
+            },
+            {
+              "rate": 10,
+              "description": "В сотрудничестве с командой Unity оптимизировал их конфигурацию Nginx, что привело к десятикратному сокращению размера бандла и ускорению загрузки WebGL-бандла.",
+              "tags": ["Optimization", "Nginx", "Unity", "Bundle size", "WebGL"]
+            },
+            {
+              "rate": 7,
+              "description": "Интегрировал TypeScript, ESLint и Husky для статической валидации, позволяя выявлять и исправлять синтаксические, стилистические и форматирующие ошибки в процессе разработки, обеспечивая стабильную и высококачественную кодовую базу.",
+              "tags": [
+                "Typescript",
+                "ESlint",
+                "Husky",
+                "Integration",
+                "Static validation",
+                "Consistency",
+                "Refactoring",
+                "Maintainability",
+                "Flexibility"
+              ]
+            },
+            {
+              "rate": 3,
+              "description": "Улучшил поддерживаемость кода, гибкость и возможность настройки системы, рефакторингом и конфигурированием её основных модулей.",
+              "tags": ["Refactoring", "Maintainability", "Flexibility"]
+            },
+            {
+              "rate": 2,
+              "description": "Повысил эффективность и качество проекта, успешно интегрировав инструмент разработки PIXI.JS.",
+              "tags": ["PIXI.JS", "Efficiency"]
+            }
+          ],
+          "skills": [
+            "PIXI.JS",
+            "TypeScript",
+            "GSAP",
+            "Vite",
+            "NodeJS",
+            "WebSocket"
+          ]
+        },
+        {
+          "name": "Extended detection and response (XDR) platform, EclecticIQ, eclecticiq.com",
+          "achievements": [
+            {
+              "rate": 7,
+              "description": "Взаимодействовал с продуктовой  и бэкенд командами, используя React, Apollo GraphQL и MUI, для разработки нового интерфейса процесса развертывания сервера Endpoint Response (ER), что привело к сокращению времени и затрат для клиентов MSSP при подключении новых клиентов.",
+              "tags": [
+                "React",
+                "Apollo GraphQL",
+                "MUI",
+                "UI",
+                "Server management",
+                "Collaboration",
+                "Cost reduction",
+                "Time reduction",
+                "Customer",
+                "Clients",
+                "Beta",
+                "Tight deadline"
+              ]
+            },
+            {
+              "rate": 10,
+              "description": "Реализовал удобный интерфейс, который позволяет пользователям легко запускать развертывание сервера ER с предустановленными настройками и получать к нему доступ по предоставленной URL-ссылке, что упростило и улучшило пользовательский опыт.",
+              "tags": [
+                "React",
+                "Apollo GraphQL",
+                "MUI",
+                "UI",
+                "Server management",
+                "UX",
+                "Streamlined process.",
+                "Beta",
+                "Tight deadline"
+              ]
+            },
+            {
+              "rate": 10,
+              "description": "Реализовал новые фичи в интерфейсе XDR, позволяющие упростить управление как данными сервера ER, так и информации о хостах, что улучшило пользовательский опыт и повысило общую эффективность системы.",
+              "tags": [
+                "React",
+                "Apollo GraphQL",
+                "MUI",
+                "UI",
+                "Server management",
+                "UX",
+                "Beta",
+                "Tight deadline"
+              ]
+            },
+            {
+              "rate": 7,
+              "description": "Улучшил пользовательский опыт, обеспечив быстрое и понятное определение состояния сервера ER, включая такие статусы, как онлайн, офлайн, подготовка, ошибка, удаление и выведение из эксплуатации. Также добавил отображение количества хостов, домена и организационной принадлежности для каждого сервера ER.",
+              "tags": [
+                "React",
+                "Apollo GraphQL",
+                "MUI",
+                "UI",
+                "Server management",
+                "UX",
+                "Beta",
+                "Tight deadline"
+              ]
+            },
+            {
+              "rate": 7,
+              "description": "Ускорил развертывание сервера ER и упростил управление его фичами, что позволило достичь всех ключевых показателей эффективности и подготовить продукт к бета-тестированию.",
+              "tags": [
+                "React",
+                "Apollo GraphQL",
+                "MUI",
+                "UI",
+                "Server management",
+                "Performance metrics",
+                "Optimization",
+                "Simplification",
+                "Beta",
+                "Tight deadline"
+              ]
+            },
+            {
+              "rate": 10,
+              "description": "Подготовил модуль Hunt Library к бета-релизу, успешно спроектировав и внедрив его в сжатые сроки, достигнув всех ключевых показателей успеха и повысив уровень безопасности в различных организациях, что в конечном итоге помогло потенциально предотвратить дорогостоящие утечки данных.",
+              "tags": [
+                "React",
+                "Apollo GraphQL",
+                "MUI",
+                "UI",
+                "Server management",
+                "Performance metrics",
+                "Optimization",
+                "Simplification",
+                "Beta",
+                "Tight deadline"
+              ]
+            },
+            {
+              "rate": 7,
+              "description": "Повысил безопасность платформы, проведя всесторонний аудит npm-пакетов и устранив 94 уязвимости, включая 13 критических, 67 высоких, 3 средних и 11 низких уязвимостей.",
+              "tags": ["Beta", "Tight deadline", "Platform security"]
+            },
+            {
+              "rate": 5,
+              "description": "Разработал и интегрировал фичи сортировки в компонент списка, что улучшило пользовательский опыт и повысило эффективность.",
+              "tags": ["React", "MUI", "UI", "UX"]
+            },
+            {
+              "rate": 5,
+              "description": "Создал компоненты меню для группировки и организации информации, что привело к более упорядоченной и удобной системе меню.",
+              "tags": ["React", "MUI", "UI", "UX"]
+            },
+            {
+              "rate": 5,
+              "description": "Спроектировал и разработал вложенные компоненты меню, эффективно организовав связанные действия в подкатегории для упрощенной навигации и улучшенного пользовательского опыта.",
+              "tags": ["React", "MUI", "UI", "UX"]
+            },
+            {
+              "rate": 5,
+              "description": "Упростил систему, внедрив универсальное время по стандарту UTC, что улучшило синхронизацию и обеспечило согласованность всех фичей.",
+              "tags": ["React", "UI", "UX"]
+            },
+            {
+              "rate": 3,
+              "description": "Разработал и интегрировал фичу, позволяющую одновременно использовать мок-сервер GraphQL и живой сервер GraphQL, что улучшило возможности тестирования и повысило эффективность процесса разработки.",
+              "tags": [
+                "Apollo GraphQL",
+                "Testing",
+                "Integration",
+                "Efficiency",
+                "Development processes"
+              ]
+            },
+            {
+              "rate": 2,
+              "description": "Разработал обходное решение для извлечения и генерации типов TypeScript из реальной схемы GraphQL-сервера.",
+              "tags": [
+                "Apollo GraphQL",
+                "Testing",
+                "Integration",
+                "Efficiency",
+                "Development processes"
+              ]
+            }
+          ],
+          "skills": [
+            "React",
+            "TypeScript",
+            "NextJS",
+            "Apollo GraphQL",
+            "TailwindCSS",
+            "MUI",
+            "AG Grid",
+            "Jest"
+          ]
+        },
+        {
+          "name": "BuildBuild Platform, BuildBuild Lab, buildbuild.io",
+          "achievements": [
+            {
+              "description": "С нуля разработал финансовый модуль для системы в короткие сроки, что позволило запустить продукт вовремя и выйти на рынок.",
+              "tags": []
+            }
+          ],
+          "skills": [
+            "React",
+            "TypeScript",
+            "NextJS",
+            "Apollo GraphQL",
+            "Ant Design",
+            "Storybook"
+          ]
+        },
+        {
+          "name": "Purchasing module for the platform, PIK.PRO",
+          "achievements": [
+            {
+              "description": "С нуля разработал модуль закупок для системы, что позволило контролировать процесс закупок и снизить расходы компании.",
+              "tags": []
+            },
+            {
+              "description": "Внедрил e2e-тестирование на Cypress, что позволило улучшить качество выпущенных фичей и отслеживать баги в работе этих фичей.",
+              "tags": []
+            }
+          ],
+          "skills": [
+            "React",
+            "TypeScript",
+            "Redux",
+            "Apollo GraphQL",
+            "MUI",
+            "styled-components",
+            "Cypress"
+          ]
+        },
+        {
+          "name": "Storekeeper app (PWA), PIK.PRO",
+          "achievements": [
+            {
+              "description": "Перевёл приложение с REST на GraphQL. Это помогло сократить количество запросов с 20 до 2 и ускорить загрузку данных, что является критически важным показателем для работы на строительных объектах. Кроме того, эта миграция дала нам больше контроля над запрашиваемыми данными и позволила уменьшить время взаимодействия с бэкенд-разработчиками.",
+              "tags": []
+            },
+            {
+              "description": "Внедрил e2e-тестирование на Cypress, что позволило улучшить качество выпущенных фичей и отслеживать баги в работе этих фичей.",
+              "tags": []
+            },
+            {
+              "description": "Полностью покрыл все фичи с помощью Cypress, что позволило улучшить качество, а также обучил QA программировать и писать автотесты.",
+              "tags": []
+            }
+          ],
+          "skills": [
+            "React",
+            "TypeScript",
+            "Redux",
+            "Apollo GraphQL",
+            "MUI",
+            "styled-components",
+            "Cypress"
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Outsource, Outstaff",
+        "site": {
+          "displayLink": "",
+          "link": ""
+        },
+        "description": "Medicine, Government and etc"
+      },
+      "position": "Senior Frontend Developer",
+      "startDate": "2014-07-01T00:00:00.000Z",
+      "finishDate": "2020-03-01T00:00:00.000Z",
+      "activities": [
+        {
+          "name": "",
+          "achievements": [],
+          "skills": [
+            "React",
+            "TypeScript",
+            "Redux",
+            "GraphQL",
+            "Ant Design",
+            "MUI",
+            "styled-components",
+            "NodeJS",
+            "WebSocket"
+          ]
+        }
+      ]
+    }
+  ],
+  "educations": [
+    {
+      "degree": "Бакалавр Прикладной математики и информатики",
+      "establishment": {
+        "name": "Самарский Государственный Университет (СамГУ)",
+        "site": {
+          "displayLink": "ssau.ru",
+          "link": "https://ssau.ru"
+        }
+      },
+      "startDate": "2011-09-01T00:00:00.000Z",
+      "finishDate": "2015-07-01T00:00:00.000Z"
+    }
+  ]
+}
