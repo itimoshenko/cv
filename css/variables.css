@@ -1,0 +1,39 @@
+@media print {
+  html {
+    --font-medium-size: 12px !important;
+  }
+}
+
+html {
+  /* COLORS */
+  --color-1: #101214;
+  --color-2: #51667b;
+
+  /* SIZES */
+  --extra-small-size: 0.15rem;
+  --small-size: 0.35rem;
+  --medium-size: 0.65rem;
+  --large-size: 1.35rem;
+
+  /* FONT SIZES */
+  --font-extra-small-size: 0.5rem;
+  --font-small-size: 0.75rem;
+  --font-medium-size: 16px;
+  --font-large-size: 1.5rem;
+  --font-extra-large-size: 2rem;
+
+  --letter-spacing-small-size: 0.05rem;
+  --letter-spacing-large-size: 0.2rem;
+
+  --line-height-medium-size: 1.5rem;
+  --line-height-large-size: 2.5rem;
+
+  /* INDENTS */
+  --default-indent-y: var(--large-size);
+  --default-indent-x: 0;
+  --default-indent: var(--default-indent-y) var(--default-indent-x);
+
+  /* BORDERS */
+  --default-border: var(--extra-small-size);
+  --default-border-radius: var(--extra-small-size);
+}

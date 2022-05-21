@@ -1,0 +1,157 @@
+@media (max-device-width: 767px) {
+  .cv {
+    --cv-main-width: 100% !important;
+  }
+
+  .cv__additionals {
+    display: none !important;
+  }
+
+  .cv__additionals.cv__additionals_mobile {
+    --cv-additionals-width: 100%;
+
+    display: block !important;
+  }
+
+  .cv__avatar-img {
+    display: none !important;
+  }
+
+  .cv__avatar-img.cv__avatar-img_mobile {
+    display: block !important;
+
+    border-radius: calc(var(--default-border-radius) * 4) !important;
+  }
+}
+
+@media (max-device-width: 1024px) {
+  .cv {
+    --cv-indent-x: 2rem !important;
+    --cv-indent-y: 1rem !important;
+  }
+}
+
+@media print {
+  .cv {
+    --cv-indent-x: 2rem !important;
+    --cv-indent-y: 1rem !important;
+  }
+
+  .cv__avatar-img {
+    display: none !important;
+  }
+
+  .cv__skills {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+
+  .cv_dark,
+  .cv_dark img {
+    filter: none !important;
+  }
+
+
+}
+
+.cv {
+  --cv-indent-x: 8rem;
+  --cv-indent-y: 4rem;
+
+  --cv-main-width: 65%;
+  --cv-main-max-width: 660px;
+
+  --cv-additionals-width: 35%;
+  --cv-additionals-max-width: 250px;
+
+  --cv-header-indent: 2.5;
+
+  display: flex;
+
+  column-gap: var(--cv-indent-x);
+
+  padding: var(--cv-indent-y) var(--cv-indent-x);
+
+  border-top: var(--small-size) solid var(--color-1);
+
+  color: var(--color-1);
+}
+
+.cv_dark {
+  filter: invert(100) hue-rotate(180deg);
+}
+
+.cv_dark img {
+  filter: invert(100) hue-rotate(180deg);
+}
+
+.cv__main {
+  width: var(--cv-main-width);
+  max-width: var(--cv-main-max-width);
+}
+
+.cv__additionals {
+  width: var(--cv-additionals-width);
+  max-width: var(--cv-additionals-max-width);
+}
+
+.cv__additionals_mobile {
+  display: none;
+}
+
+.cv__header {
+  margin-bottom: var(--cv-header-indent);
+
+  line-height: var(--line-height-large-size);
+}
+
+.cv__name {
+  font-weight: 700;
+  font-size: var(--font-extra-large-size);
+}
+
+.cv__position {
+  font-weight: 400;
+  font-size: var(--font-large-size);
+}
+
+.cv__title {
+  color: var(--color-2);
+
+  font-size: var(--font-extra-small-size);
+
+  letter-spacing: var(--letter-spacing-large-size);
+  text-transform: uppercase;
+}
+
+.cv__avatar-img {
+  display: none;
+
+  width: 100%;
+
+  border-radius: 100%;
+
+  margin: var(--default-indent);
+}
+
+.cv__avatar-img_mobile {
+  display: none;
+}
+
+.cv__about, .cv__experience {
+  margin: var(--default-indent);
+}
+
+.cv__introduction {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.cv__introduction-paragraph {
+  margin: var(--small-size) 0;
+}
+
+.cv__contacts, .cv__skills, .cv__extra-info {
+  margin: var(--default-indent);
+}

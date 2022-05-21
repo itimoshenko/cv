@@ -1,0 +1,113 @@
+@media (max-device-width: 1024px) {
+  .experience__about,
+  .experience_with-path::before,
+  .experience_with-dashed-path::before,
+  .experience__position_with-point::before,
+  .experience_with-dashed-path::after {
+    display: none !important;
+  }
+
+}
+
+@media print {
+  .experience__about,
+  .experience_with-path::before,
+  .experience_with-dashed-path::before,
+  .experience__position_with-point::before,
+  .experience_with-dashed-path::after {
+    display: none !important;
+  }
+
+  .experience__header {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+.experience {
+  position: relative;
+  margin: var(--default-indent);
+}
+
+.experience:first-of-type {
+  margin-top: 0;
+}
+
+.experience_with-path::before {
+  content: "";
+  position: absolute;
+  left: calc(var(--font-extra-large-size) * -1);
+  top: var(--font-small-size);
+  height: calc(100% + var(--font-large-size));
+  border-left: var(--default-border) solid var(--color-2);
+  transform: translateX(100%);
+}
+
+.experience_with-dashed-path::after {
+  content: "Some part of the team is the same";
+
+  font-size: var(--font-extra-small-size);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-small-size);
+  text-transform: uppercase;
+  color: var(--color-2);
+
+  position: absolute;
+  top: var(--font-extra-large-size);
+  bottom: 0;
+  left: calc(var(--font-extra-large-size) * -1 - var(--font-extra-small-size));
+
+  transform: translateX(-50%) rotate(-90deg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.experience_with-dashed-path::before {
+  border-left: var(--default-border) dashed var(--color-2) !important;
+}
+
+.experience__position {
+  position: relative;
+
+  font-weight: 700;
+}
+
+.experience__position_with-point::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: var(--default-border-radius);
+  height: var(--medium-size);
+  width: var(--medium-size);
+  background-color: var(--color-2);
+  left: calc((var(--font-extra-large-size) + var(--default-border) * 0.5) * -1);
+  transform: translateY(75%);
+}
+
+.experience__organization {
+  font-weight: 400;
+
+  text-transform: uppercase;
+}
+
+.experience__about {
+  font-size: var(--font-extra-small-size);
+  font-weight: 400;
+  letter-spacing: var(--letter-spacing-small-size);
+  text-transform: uppercase;
+
+  color: var(--color-2);
+}
+
+.experience__duration {
+  font-size: var(--font-small-size);
+
+  color: var(--color-2);
+}
+
+.experience__skills {
+  display: inline-block;
+  padding-bottom: var(--default-indent-y);
+}

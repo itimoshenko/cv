@@ -1,0 +1,27 @@
+.legend {
+  display: none;
+
+  margin: var(--default-indent);
+}
+
+.legend-item {
+  display: inline-block;
+
+  border-radius: var(--default-border-radius);
+  height: var(--medium-size);
+  width: var(--medium-size);
+}
+
+.legend-item_high {
+  background-color: var(--color-1);
+}
+
+.legend-item_medium {
+  background-color: var(--color-2);
+}
+
+.legend-item_low {
+  opacity: 0.5;
+
+  background-color: var(--color-2);
+}
