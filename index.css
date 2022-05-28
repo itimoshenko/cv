@@ -1,0 +1,274 @@
+html {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 18px;
+
+  --color-1: #101214;
+  --color-2: #73808D;
+}
+
+@page {
+  size: A4;
+
+  margin: 0;
+}
+
+@media print {
+  * {
+    page-break-inside: avoid;
+  }
+
+  .divider {
+    page-break-before: always;
+  }
+}
+
+h1, h2, h3, h4, h5, h6, body {
+  margin: 0;
+}
+
+body {
+  color: var(--color-1);
+}
+
+.link {
+  text-decoration: none;
+
+  color: var(--color-2);
+}
+
+.link_centered {
+  display: flex;
+  align-items: center;
+}
+
+.link_linkedin::before {
+  content: '';
+
+  display: inline-block;
+
+  margin-right: 4px;
+
+  width: 11px;
+  height: 11px;
+
+  background-image: url('/assets/linkedin.svg');
+}
+
+.link_site::before {
+  content: '';
+
+  display: inline-block;
+
+  margin-right: 4px;
+
+  width: 11px;
+  height: 11px;
+
+  background-image: url('/assets/site.svg');
+}
+
+.link_mail::before {
+  content: '';
+
+  display: inline-block;
+
+  margin-right: 4px;
+
+  width: 11px;
+  height: 11px;
+
+  background-image: url('/assets/mail.svg');
+}
+
+.link:hover {
+  color: var(--color-1);
+}
+
+.text {
+  color: var(--color-2);
+}
+
+.text_bold {
+  font-weight: 400;
+
+  color: var(--color-1);
+}
+
+.text_light {
+  opacity: 0.5;
+}
+
+.cv {
+  display: grid;
+
+
+  grid-template-columns: 2fr 1fr;
+
+  grid-template-areas: "title       ."
+                       "about       additionals"
+                       "experience  additionals"
+                       "education   additionals"
+                       ".           additionals"
+                       ".           additionals"
+                       ".           additionals";
+
+  column-gap: 18px;
+
+  padding: 48px;
+
+  border-top: 4px solid var(--color-1);
+}
+
+.cv__header {
+  grid-area: title;
+
+  padding-bottom: 32px;
+
+  line-height: 28px;
+}
+
+.cv__name {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.cv__position {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.cv__title {
+  color: var(--color-2);
+
+  font-size: 7px;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.cv__about {
+  padding-bottom: 18px;
+
+  grid-area: about;
+}
+
+.cv__introduction {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.cv__experience {
+  padding-bottom: 18px;
+
+  grid-area: experience;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cv__education {
+  padding-bottom: 18px;
+
+  grid-area: education;
+}
+
+.cv__contacts, .cv__preferences {
+  display: flex;
+
+  flex-direction: column;
+
+  padding-bottom: 18px;
+}
+
+.cv__additionals {
+  grid-area: additionals;
+}
+
+.cv__legend, .cv__skills {
+  padding-bottom: 18px;
+}
+
+.cv__legend-item {
+  display: inline-block;
+
+  border-radius: 2px;
+  height: 8px;
+  width: 8px;
+}
+
+.cv__legend-item_high {
+  background-color: var(--color-1);
+}
+
+.cv__legend-item_medium {
+  background-color: var(--color-2);
+}
+
+.cv__legend-item_low {
+  opacity: 0.5;
+
+  background-color: var(--color-2);
+}
+
+.job, .education {
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.job_with-path::before, .education_with-path::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 9px;
+  height: 100%;
+  width: 2px;
+  background-color: var(--color-2);
+}
+
+.job__header, .education__header {
+}
+
+.job__position, .education__degree {
+  position: relative;
+
+  font-weight: 700;
+}
+
+.job__position_with-point::before, .education__degree_with-point::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 2px;
+  height: 8px;
+  width: 8px;
+  background-color: var(--color-2);
+  top: 5px;
+  left: -27px;
+}
+
+.job__company, .education__establishment {
+  font-weight: 400;
+
+  text-transform: uppercase;
+}
+
+.job__about {
+  font-size: 7px;
+  font-weight: 400;
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: var(--color-2);
+}
+
+.job__duration, .education__duration {
+  font-size: 9px;
+
+  color: var(--color-2);
+}
