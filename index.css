@@ -54,7 +54,7 @@ body {
   width: 11px;
   height: 11px;
 
-  background-image: url('/assets/linkedin.svg');
+  background-image: url('assets/linkedin.svg');
 }
 
 .link_site::before {
@@ -67,7 +67,7 @@ body {
   width: 11px;
   height: 11px;
 
-  background-image: url('/assets/site.svg');
+  background-image: url('assets/site.svg');
 }
 
 .link_mail::before {
@@ -80,7 +80,7 @@ body {
   width: 11px;
   height: 11px;
 
-  background-image: url('/assets/mail.svg');
+  background-image: url('assets/mail.svg');
 }
 
 .link:hover {
