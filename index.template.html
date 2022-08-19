@@ -58,17 +58,19 @@
       </section>
       <section class="cv__education">
         <h3 class="cv__title">Education</h3>
-        <article class="education">
-          <header class="education__header">
-            <h4 class="education__degree">Bachelor of Computer Science</h4>
-            <h5 class="education__establishment">Samara State University, <a class="link" href="https://ssau.ru">ssau.ru</a></h5>
-          </header>
-          <section class="education__duration">
-            <time>September 2011</time>
-            <span>—</span>
-            <time>July 2015</time>
-          </section>
-        </article>
+        ${scope.educations.map(education => `
+          <article class="education">
+            <header class="education__header">
+              <h4 class="education__degree">${education.degree}</h4>
+              <h5 class="education__establishment">${education.establishment.name}, <a class="link" href="${education.establishment.site.link}">${education.establishment.site.displayLink}</a></h5>
+            </header>
+            <section class="education__duration">
+              <time>${education.startDate}</time>
+              <span>—</span>
+              <time>${education.finishDate}</time>
+            </section>
+          </article>
+        `)}
       </section>
       <section class="cv__additionals">
         <section class="cv__contacts">

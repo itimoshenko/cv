@@ -213,5 +213,19 @@
         }
       ]
     }
+  ],
+  "educations": [
+    {
+      "degree": "Bachelor of Computer Science",
+      "establishment": {
+        "name": "Samara State University",
+        "site": {
+          "displayLink": "ssau.ru",
+          "link": "https://ssau.ru"
+        }
+      },
+      "startDate": "September 2011",
+      "finishDate": "July 2015"
+    }
   ]
 }
