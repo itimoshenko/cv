@@ -1,0 +1,217 @@
+{
+  "name": "Ivan Timoshenko",
+  "position": "Senior Frontend Developer",
+  "jobs": [
+    {
+      "company": {
+        "name": "SoftPro",
+        "site": {
+          "displayLink": "softpro.com",
+          "link": "https://softpro.com"
+        },
+        "description": "is a software provider for betting shops working with VIP clients."
+      },
+      "position": "Senior Frontend Developer",
+      "startDate": "October 2021",
+      "finishDate": "Present",
+      "activities": [
+        {
+          "name": "",
+          "achievements": [
+            "Implemented some features for the big launch of new project."
+          ]
+        }
+      ]
+    },
+    {
+      "isLinkedWithPrevJob": true,
+      "company": {
+        "name": "BuildBuild Lab",
+        "site": {
+          "displayLink": "buildbuild.io",
+          "link": "https://buildbuild.io"
+        },
+        "description": "is a developer of software products in the field of construction technologies."
+      },
+      "position": "Senior Frontend Developer",
+      "startDate": "January 2021",
+      "finishDate": "September 2021",
+      "activities": [
+        {
+          "name": "",
+          "achievements": [
+            "Implemented Financial module for the system from scratch in a short time, which allowed the product to be launched on time and enter the market.",
+            "Interviewed 20+ developers and hired 2 of them, which allowed us to expand the frontend team and take on more tasks."
+          ]
+        }
+      ]
+    },
+    {
+      "isLinkedWithNextJob": true,
+      "company": {
+        "name": "PIK.PRO",
+        "site": {
+          "displayLink": "pik.ru",
+          "link": "https://pik.ru"
+        },
+        "description": "is the largest Russian development company that has built more than 21 million ㎡ of housing."
+      },
+      "position": "Lead Frontend Developer",
+      "startDate": "March 2020",
+      "finishDate": "January 2021",
+      "activities": [
+        {
+          "name": "Purchasing module for the system",
+          "achievements": [
+            "Implemented Purchasing module for the system from scratch, which made it possible to control the purchase process and reduce costs for the company."
+          ]
+        },
+        {
+          "name": "Storekeeper app",
+          "achievements": [
+            "Migrated the application from REST to GraphQL. This helped to reduce the number of requests from 20 to 2 and speed up data loading, which is a critical indicator for construction projects. And as a bonus, the migration allowed us to gain more control over the requested data and reduce the interaction time with backenders by 30%.",
+            "Completely covered all features with Cypress which allowed improve the quality."
+          ]
+        },
+        {
+          "name": "Another activites",
+          "achievements": [
+            "Interviewed 20+ developers and hired 2 of them, which allowed us to expand the frontend team and take on more tasks.",
+            "Implemented e2e testing on Cypress, which made it possible to improve the quality of released features and watch for broken features."
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Axbit IT",
+        "site": {
+          "displayLink": "axbit.ru",
+          "link": "https://axbit.ru"
+        },
+        "description": "is a software development company that provides a wide range of services from web and mobile application development to complex enterprise automation."
+      },
+      "position": "Head of Frontend Department",
+      "startDate": "November 2018",
+      "finishDate": "February 2020",
+      "activities": [
+        {
+          "name": "",
+          "achievements": [
+            "Became a Head of Frontend Department with 12 developers and formed 4 Frontend teams, which made it easier to manage developers.",
+            "New development processes were introduced in the department, which made it easier to manage developers and implement projects more efficiently.",
+            "Passed 10+ interviews to confirm the company's expertise and get new customers.",
+            "Interviewed 10+ developers and hired 5 of them, which allowed us to expand the department and take on more projects.",
+            "Implemented 9 projects from scratch with me as Lead Frontend Developer.",
+            "Implemented 2 out staff projects from scratch with me as Senior Frontend Developer."
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Yandex",
+        "site": {
+          "displayLink": "yandex.ru",
+          "link": "https://yandex.ru/images"
+        },
+        "description": "is one of the largest technology companies in Russia, developing a popular search engine in the country and creating services for millions of people."
+      },
+      "position": "Frontend Developer",
+      "startDate": "August 2017",
+      "finishDate": "October 2018",
+      "activities": [
+        {
+          "name": "Search. Pictures",
+          "achievements": [
+            "Implemented several features related to image search for the big launch of \"Alice voice assistant\" product.",
+            "Implemented several features that affect the increase in service revenue through advertising."
+          ]
+        }
+      ]
+    },
+    {
+      "isLinkedWithPrevJob": true,
+      "company": {
+        "name": "Axbit IT",
+        "site": {
+          "displayLink": "axbit.ru",
+          "link": "https://axbit.ru"
+        },
+        "description": ""
+      },
+      "position": "Lead Frontend Developer",
+      "startDate": "July 2016",
+      "finishDate": "August 2017",
+      "activities": [
+        {
+          "name": "Draft legal documentation",
+          "achievements": [
+            "Implemented a mechanism for dynamic generation of forms based on metadata received from the server, which made it possible to remove the frontend development stage and reduce the time for adding a new document by 2 hours."
+          ]
+        },
+        {
+          "name": "Another activites",
+          "achievements": [
+            "Became a Lead Frontend Developer and assembled my team of 5 people.",
+            "Implemented the first version of the company's website, which allowed the company to become more visible and attract additional orders.",
+            "Implemented several scripts and configs for building and deploying the project, which made it possible to quickly start developing projects.",
+            "Implemented 5 projects from scratch with me as Lead Frontend Developer."
+          ]
+        }
+      ]
+    },
+    {
+      "isLinkedWithPrevJob": true,
+      "company": {
+        "name": "Axbit IT",
+        "site": {
+          "displayLink": "axbit.ru",
+          "link": "https://axbit.ru"
+        },
+        "description": ""
+      },
+      "position": "Fullstack Developer",
+      "startDate": "July 2015",
+      "finishDate": "July 2016",
+      "activities": [
+        {
+          "name": "Telemedicine consultations",
+          "achievements": [
+            "Implemented more than 50% of the data access layer.",
+            "The OAuth module (OAuth client and OAuth server) was implemented, which allowed users (doctors) to move from one system instance to another without registration, thereby reducing the registration time from 25 minutes to 2 minutes.",
+            "Implemented a video conferencing module, which accelerated the receipt of consultations by 2 times."
+          ]
+        },
+        {
+          "name": "Another activites",
+          "achievements": [
+            "Implemented 4 projects from scratch with me as Fullstack Developer."
+          ]
+        }
+      ]
+    },
+    {
+      "company": {
+        "name": "Webzavod",
+        "site": {
+          "displayLink": "webzavod.ru",
+          "link": "https://webzavod.ru"
+        },
+        "description": "is a company that develops and implements software systems for automating business processes."
+      },
+      "position": "Junior Fullstack Developer",
+      "startDate": "July 2014",
+      "finishDate": "July 2015",
+      "activities": [
+        {
+          "name": "",
+          "achievements": [
+            "Implemented 20+ small features for automating business processes on the MS SharePoint 2010/2013 platform.",
+            "Implemented 2 projects with me as Junior Fullstack Developer."
+          ]
+        }
+      ]
+    }
+  ]
+}

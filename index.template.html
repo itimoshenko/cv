@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CV | ${scope.name} | ${scope.position}</title>
+    <meta charset="utf-8" />
+    <link rel="icon" href="assets/ico.svg">
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <article class="cv">
+      <header class="cv__header">
+        <h1 class="cv__name">${scope.name}</h1>
+        <h2 class="cv__position">${scope.position}</h2>
+      </header>
+      <section class="cv__about">
+        <h3 class="cv__title">About</h3>
+        <div class="text cv__introduction">
+          <span>I have <b class="text text_bold">8+&nbsp;years of Frontend Development experience</b>, two of which I was a Fullstack Developer. Also, I have <b class="text text_bold">3+&nbsp;years of management experience</b>.</span>
+          <span>I'm currently working with the <b class="text text_bold">React ecosystem</b>. I've been using <b class="text text_bold">React</b> since version 0.14. I've <b class="text text_bold">built 20+&nbsp;SPAs using React</b>.</span>
+          <span>I love <b class="text text_bold">functional</b> and <b class="text text_bold">declarative</b> programming.</span>
+        </div>
+      </section>
+      <section class="cv__experience">
+        <h3 class="cv__title">Experience</h3>
+        ${scope.jobs.map(job => `
+          <article class="job ${job.isLinkedWithPrevJob ? 'job_with-path' : ''}">
+            <header class="job__header">
+              <h4 class="job__position ${(job.isLinkedWithPrevJob || job.isLinkedWithNextJob) ? 'job__position_with-point' : ''}">${job.position}</h4>
+              <h5 class="job__company">
+                ${job.company.name},
+                <a class="link" href="${job.company.site.link}">${job.company.site.displayLink}</a>
+                <span class="job__about"> — ${job.company.description}</span>
+              </h5>
+            </header>
+            <section class="job__duration">
+              <time>${job.startDate}</time>
+              <span>—</span>
+              <time>${job.finishDate}</time>
+            </section>
+            <section class="job__experience">
+              ${job.activities.map(activity => `
+                <header>
+                  ${activity.name}
+                </header>
+                <article>
+                  <ul>
+                    ${activity.achievements.map(achievement => `
+                      <li>
+                        ${achievement}
+                      </li>
+                    `).join('')}
+                  </ul>
+                </article>
+              `).join('')}
+            </section>
+          </article>
+        `).join('')}
+      </section>
+      <section class="cv__education">
+        <h3 class="cv__title">Education</h3>
+        <article class="education">
+          <header class="education__header">
+            <h4 class="education__degree">Bachelor of Computer Science</h4>
+            <h5 class="education__establishment">Samara State University, <a class="link" href="https://ssau.ru">ssau.ru</a></h5>
+          </header>
+          <section class="education__duration">
+            <time>September 2011</time>
+            <span>—</span>
+            <time>July 2015</time>
+          </section>
+        </article>
+      </section>
+      <section class="cv__additionals">
+        <section class="cv__contacts">
+          <h3 class="cv__title">Contacts</h3>
+          <a class="link link_centered link_mail" href="mailto:timoshenko.i.s.93@gmail.com">timoshenko.i.s.93@gmail.com</a>
+          <a class="link link_centered link_linkedin" href="https://www.linkedin.com/in/istimoshenko/?locale=en_US">linkedin.com/in/istimoshenko</a>
+          <!-- <a class="link link_centered link_site" href="http://127.0.0.1:6009">127.0.0.1:6009</a> -->
+        </section>
+        <!-- <section class="cv__preferences">
+          <span>Visa Sponsorship Required</span>
+        </section> -->
+        <!-- <section class="cv__legend">
+          <h3 class="cv__title">Legend</h3>
+          <div>
+            <div><div class="cv__legend-item cv__legend-item_high"></div><span class="text text_bold"> — high level</span></div>
+            <div><div class="cv__legend-item cv__legend-item_medium"></div><span class="text"> — medium level</span></div>
+            <div><div class="cv__legend-item cv__legend-item_low"></div><span class="text text_light"> — low level</span></div>
+          </div>
+        </section> -->
+        <section class="cv__skills">
+          <h3 class="cv__title">Languages</h3>
+          <span class="text">
+            <b class="text text_bold">
+              JavaScript (Typescript), HTML, CSS,
+            </b>
+            <span class="text text_light">
+             C#, Java, C++, SQL
+            </span>
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">Platforms</h3>
+          <span class="text">
+            <b class="text text_bold">
+              NodeJS, Apollo GraphQL,
+            </b>
+            <span class="text text_light">
+              .NET Framework
+            </span>
+          </span>
+        </section>
+        <!-- <section class="cv__skills">
+          <h3 class="cv__title">Web API</h3>
+          <span class="text">
+            <b class="text text_bold"></b>
+          </span>
+        </section> -->
+        <section class="cv__skills">
+          <h3 class="cv__title">JS Frameworks</h3>
+          <span class="text">
+            NextJS, Redux-Saga, AngularJS,
+            <span class="text text_light">
+              React Native, Angular, Vue
+            </span>
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">JS Libraries</h3>
+          <span class="text">
+            <b class="text text_bold">React, MobX, Redux, Ramda</b>,
+            OpenLayers, RxJS, Formik, Redux Forms, jQuery,
+            <span class="text text_light">
+              Flux, sipML5, jsSIP, i-bem
+            </span>
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">UI Libraries</h3>
+          <span class="text">
+            <b class="text text_bold">Ant Design</b>, Material Design Lite, Bootstrap
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">Code Generators</h3>
+          <span class="text">
+            <b class="text text_bold">Create React App</b>, Yeoman
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">CSS Preprocessors</h3>
+          <span class="text">
+            <b class="text text_bold">PostCSS</b>, Sass, Less, Stylus
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">NodeJS Frameworks</h3>
+          <span class="text">
+            <b class="text text_bold">NestJS, Express</b>
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">NodeJS Libraries</h3>
+          <span class="text">
+            Mongoose
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">NodeJS Template Engines</h3>
+          <span class="text">
+            Pug, EJS, bem-xjst
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">NodeJS ORM</h3>
+          <span class="text">
+            TypeORM
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">Bundlers</h3>
+          <span class="text">
+            <b class="text text_bold">Webpack</b>
+          </span>
+        </section>
+        <!-- <section class="cv__skills">
+          <h3 class="cv__title">C# Frameworks</h3>
+          <span class="text">
+            <span class="text text_light">
+              ASP.NET MVC
+            </span>
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">C# ORM</h3>
+          <span class="text">
+            <span class="text text_light">
+              Entity Framework
+            </span>
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">C# Template Engines</h3>
+          <span class="text">
+            <span class="text text_light">
+              Razor
+            </span>
+          </span>
+        </section> -->
+        <section class="cv__skills">
+          <h3 class="cv__title">RDBMS</h3>
+          <span class="text">
+            <span class="text text_light">
+              PostgreSQL, MS SQL Server
+            </span>
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">NoSQL</h3>
+          <span class="text">
+            MongoDB
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">VCS</h3>
+          <span class="text">
+            <b class="text text_bold">Git (Git-flow)</b>,
+            <span class="text text_light">
+              Mercurial (Hg-flow), TFS
+            </span>
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">ITS</h3>
+          <span class="text">
+            <b class="text text_bold">Jira</b>,
+            <span class="text text_light">
+              Yandex Tracker, Redmine, TFS
+            </span>
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">Testing tools</h3>
+          <span class="text">
+            <b class="text text_bold"> Cypress, WebdriverIO,</b>,
+            Jest, Mocha, Karma, Hermione, Gemini
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">Package Managers</h3>
+          <span class="text">
+            <b class="text text_bold">NPM</b>, Yarn
+          </span>
+        </section>
+        <section class="cv__skills">
+          <h3 class="cv__title">OS</h3>
+          <span class="text">
+            <b class="text text_bold">Mac OS X</b>, Windows 10, Linux (Ubuntu, Debian)
+          </span>
+        </section>
+        <!-- <section class="cv__skills">
+          <h3 class="cv__title">IDE</h3>
+          <span class="text">
+            <b class="text text_bold">Visual Studio Code</b>, Atom, Visual Studio, Eclipse, Code::Blocks
+          </span>
+        </section> -->
+      </section>
+    </article>
+  </body>
+</html>
