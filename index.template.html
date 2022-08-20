@@ -15,9 +15,9 @@
       <section class="cv__about">
         <h3 class="cv__title">About</h3>
         <div class="text cv__introduction">
-          <span>I have <b class="text text_bold">8+&nbsp;years of Frontend Development experience</b>, two of which I was a Fullstack Developer. Also, I have <b class="text text_bold">3+&nbsp;years of management experience</b>.</span>
-          <span>I'm currently working with the <b class="text text_bold">React ecosystem</b>. I've been using <b class="text text_bold">React</b> since version 0.14. I've <b class="text text_bold">built 20+&nbsp;SPAs using React</b>.</span>
-          <span>I love <b class="text text_bold">functional</b> and <b class="text text_bold">declarative</b> programming.</span>
+          ${scope.about.map(p => `
+            <span>${p.join(' ')}</span><br>
+          `).join('')}
         </div>
       </section>
       <section class="cv__experience">

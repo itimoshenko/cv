@@ -1,6 +1,26 @@
 {
   "name": "Ivan Timoshenko",
-  "position": "Senior Frontend Developer",
+  "position": "Senior Software Engineer",
+  "about": [
+    [
+      "I've got <b class=\"text text_bold\">8+ years of experience</b> in <b class=\"text text_bold\">Frontend Development</b>, two of which I was a <b class=\"text text_bold\">Fullstack Developer</b>.",
+      "I have worked in different subject areas such as medicine, government, construction technology and even betting.",
+      "I've <b class=\"text text_bold\">built 20+ SPAs using React</b> and most of them were <b class=\"text text_bold\">from scratch</b>.",
+      "Also I've built several <b class=\"text text_bold\">REST services from scratch using NodeJS</b>."
+    ],
+    [
+      "I'm currently working with the <b class=\"text text_bold\">React and NodeJS</b> ecosystems.",
+      "I have strong skills like JS, HTML, CSS, Typescript and <b class=\"text text_bold\">React</b> in Frontend part.",
+      "And I have medium skills like <b class=\"text text_bold\">NodeJS</b>, SQL, Postgres, MongoDB, Express, NestJS and TypeORM in Backend part."
+    ],
+    [
+      "So, I can <b class=\"text text_bold\">build a complete application from scratch and dockerize</b> it."
+    ],
+    [
+      "Also, I have <b class=\"text text_bold\">3+ years of management experience</b>.",
+      "I managed <b class=\"text text_bold\">several teams</b> and was even a <b class=\"text text_bold\">Head of a Frontend Department</b>."
+    ]
+  ],
   "contacts": [
     {
       "type": "mail",
@@ -107,9 +127,9 @@
       "low": []
     },
     {
-      "name": "Bundlers",
+      "name": "DevOps",
       "strong": ["Webpack"],
-      "medium": [],
+      "medium": ["Docker"],
       "low": []
     },
     {
@@ -128,13 +148,13 @@
       "name": "VCS",
       "strong": ["Git (Git-flow)"],
       "medium": [],
-      "low": ["Mercurial (Hg-flow)", "TFS"]
+      "low": ["Mercurial (Hg-flow)"]
     },
     {
       "name": "ITS",
       "strong": ["Jira"],
       "medium": [],
-      "low": ["Redmine", "TFS"]
+      "low": ["Redmine"]
     },
     {
       "name": "Testing tools",
