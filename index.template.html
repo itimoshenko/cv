@@ -29,7 +29,7 @@
               <h5 class="job__company">
                 ${job.company.name},
                 <a class="link" href="${job.company.site.link}">${job.company.site.displayLink}</a>
-                <span class="job__about"> — ${job.company.description}</span>
+                <span class="job__about">${job.company.description}</span>
               </h5>
             </header>
             <section class="job__duration">
@@ -92,10 +92,10 @@
             <h3 class="cv__title">${skill.name}</h3>
             <span class="text">
               <b class="text text_bold">
-                ${skill.strong.join(', ')}
+                ${skill.strong.join(', ')}${skill.strong.length && (skill.medium.length || skill.low.length) ? ', ' : ''}
               </b>
               <span>
-                ${skill.medium.join(', ')}
+                ${skill.medium.join(', ')}${skill.medium.length && skill.low.length ? ', ' : ''}
               </span>
               <span class="text text_light">
                 ${skill.low.join(', ')}
