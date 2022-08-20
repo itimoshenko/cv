@@ -1,6 +1,166 @@
 {
   "name": "Ivan Timoshenko",
   "position": "Senior Frontend Developer",
+  "contacts": [
+    {
+      "type": "mail",
+      "displayLink": "job.timoshenko.i.s.93@gmail.com",
+      "link": "mailto:job.timoshenko.i.s.93@gmail.com"
+    },
+    {
+      "type": "calendar",
+      "displayLink": "job.timoshenko.i.s.93@gmail.com",
+      "link": "https://calendar.google.com/calendar/u/1?cid=am9iLnRpbW9zaGVua28uaS5zLjkzQGdtYWlsLmNvbQ"
+    },
+    {
+      "type": "linkedin",
+      "displayLink": "linkedin.com/in/istimoshenko",
+      "link": "https://www.linkedin.com/in/istimoshenko/?locale=en_US"
+    },
+    {
+      "type": "telegram",
+      "displayLink": "itimoshenko",
+      "link": "https://t.me/itimoshenko"
+    },
+    {
+      "type": "site",
+      "displayLink": "itimoshenko.github.io/cv/",
+      "link": "https://itimoshenko.github.io/cv/"
+    },
+    {
+      "type": "github",
+      "displayLink": "github.com/itimoshenko",
+      "link": "https://github.com/itimoshenko"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "strong": ["JavaScript (Typescript)", "HTML", "CSS"],
+      "medium": ["C#", "SQL"],
+      "low": ["Java", "C++"]
+    },
+    {
+      "name": "Platforms",
+      "strong": ["NodeJS"],
+      "medium": ["Apollo GraphQL"],
+      "low": []
+    },
+    {
+      "name": "Web APIs",
+      "strong": ["XMLHttpRequest", "Fetch API", "Server-sent events", "Websockets API", "WebRTC API", "File API", "Storage API", "History API"],
+      "medium": ["Fullscreen API", "Pointer Events", "Canvas API", "Video and Audio APIs", "Service Worker API"],
+      "low": ["Page Visibility API", "Clipboard API", "Performance API"]
+    },
+    {
+      "name": "JS Frameworks",
+      "strong": [],
+      "medium": ["NextJS", "Redux-Saga", "AngularJS"],
+      "low": ["React Native", "Angular", "Vue"]
+    },
+    {
+      "name": "JS Libraries",
+      "strong": ["React", "MobX", "Redux", "Ramda", "OpenLayers", "jQuery"],
+      "medium": ["RxJS", "Formik", "Redux Forms"],
+      "low": []
+    },
+    {
+      "name": "UI Libraries",
+      "strong": ["Ant Design"],
+      "medium": ["Material Design Lite", "Bootstrap"],
+      "low": []
+    },
+    {
+      "name": "Code Generators",
+      "strong": ["Create React App"],
+      "medium": ["Yeoman"],
+      "low": []
+    },
+    {
+      "name": "Code Generators",
+      "strong": ["PostCSS"],
+      "medium": ["Sass", "Less", "Stylus"],
+      "low": []
+    },
+    {
+      "name": "NodeJS Frameworks",
+      "strong": ["NestJS", "Express"],
+      "medium": [],
+      "low": []
+    },
+    {
+      "name": "NodeJS Libraries",
+      "strong": [],
+      "medium": ["Mongoose"],
+      "low": []
+    },
+    {
+      "name": "NodeJS Template Engines",
+      "strong": [],
+      "medium": ["Pug", "EJS"],
+      "low": []
+    },
+    {
+      "name": "NodeJS ORM",
+      "strong": [],
+      "medium": ["TypeORM"],
+      "low": []
+    },
+    {
+      "name": "Bundlers",
+      "strong": ["Webpack"],
+      "medium": [],
+      "low": []
+    },
+    {
+      "name": "RDBMS",
+      "strong": [],
+      "medium": ["PostgreSQL", "MS SQL Server"],
+      "low": []
+    },
+    {
+      "name": "NoSQL",
+      "strong": [],
+      "medium": ["MongoDB"],
+      "low": []
+    },
+    {
+      "name": "VCS",
+      "strong": ["Git (Git-flow)"],
+      "medium": [],
+      "low": ["Mercurial (Hg-flow)", "TFS"]
+    },
+    {
+      "name": "ITS",
+      "strong": ["Jira"],
+      "medium": [],
+      "low": ["Redmine", "TFS"]
+    },
+    {
+      "name": "Testing tools",
+      "strong": ["Cypress", "WebdriverIO", "Jest"],
+      "medium": ["Mocha, Karma"],
+      "low": []
+    },
+    {
+      "name": "Package Managers",
+      "strong": ["NPM", "Yarn"],
+      "medium": [],
+      "low": []
+    },
+    {
+      "name": "OS",
+      "strong": ["Mac OS X"],
+      "medium": ["Windows 10", "Linux (Ubuntu, Debian)"],
+      "low": []
+    },
+    {
+      "name": "IDE",
+      "strong": ["Visual Studio Code"],
+      "medium": [],
+      "low": []
+    }
+  ],
   "jobs": [
     {
       "company": {
@@ -192,6 +352,7 @@
       ]
     },
     {
+      "isLinkedWithNextJob": true,
       "company": {
         "name": "Webzavod",
         "site": {

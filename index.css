@@ -44,7 +44,12 @@ body {
   align-items: center;
 }
 
-.link_linkedin::before {
+.link_linkedin::before,
+.link_site::before,
+.link_mail::before,
+.link_calendar::before,
+.link_github::before,
+.link_telegram::before {
   content: '';
 
   display: inline-block;
@@ -54,32 +59,32 @@ body {
   width: 11px;
   height: 11px;
 
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.link_telegram::before {
+  background-image: url('assets/telegram.svg');
+}
+
+.link_github::before {
+  background-image: url('assets/github.svg');
+}
+
+.link_calendar::before {
+  background-image: url('assets/calendar.svg');
+}
+
+.link_linkedin::before {
   background-image: url('assets/linkedin.svg');
 }
 
 .link_site::before {
-  content: '';
-
-  display: inline-block;
-
-  margin-right: 4px;
-
-  width: 11px;
-  height: 11px;
-
   background-image: url('assets/site.svg');
 }
 
 .link_mail::before {
-  content: '';
-
-  display: inline-block;
-
-  margin-right: 4px;
-
-  width: 11px;
-  height: 11px;
-
   background-image: url('assets/mail.svg');
 }
 
