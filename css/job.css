@@ -1,0 +1,61 @@
+.job, .education {
+  position: relative;
+  padding-bottom: 18px;
+}
+
+.job_with-path::before, .education_with-path::before {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 9px;
+  height: 100%;
+  width: 2px;
+  border-left: 2px solid var(--color-2);
+}
+
+.job_with-dashed-path::before, .education_with-dashed-path::before {
+  border-left: 2px dashed var(--color-2) !important;
+}
+
+.job__header, .education__header {
+}
+
+.job__position, .education__degree {
+  position: relative;
+
+  font-weight: 700;
+}
+
+.job__position_with-point::before, .education__degree_with-point::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 2px;
+  height: 8px;
+  width: 8px;
+  background-color: var(--color-2);
+  top: 5px;
+  left: -27px;
+}
+
+.job__company, .education__establishment {
+  font-weight: 400;
+
+  text-transform: uppercase;
+}
+
+.job__about {
+  font-size: 7px;
+  font-weight: 400;
+
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  color: var(--color-2);
+}
+
+.job__duration, .education__duration {
+  font-size: 9px;
+
+  color: var(--color-2);
+}
