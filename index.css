@@ -232,7 +232,11 @@ body {
   top: 9px;
   height: 100%;
   width: 2px;
-  background-color: var(--color-2);
+  border-left: 2px solid var(--color-2);
+}
+
+.job_with-dashed-path::before, .education_with-dashed-path::before {
+  border-left: 2px dashed var(--color-2) !important;
 }
 
 .job__header, .education__header {

@@ -1,3 +1,33 @@
+${
+  (
+    scope.utils = {
+      formatDate: (date) => {
+        return new Date(date).toLocaleDateString('en', { year: 'numeric', month: 'long' })
+      },
+      formatPeriod: (startDate, endDate) => {
+        const sDate = new Date(startDate);
+        const eDate = new Date(endDate);
+
+        const fullMonthesCount = (eDate.getFullYear() - sDate.getFullYear()) * 12 + (eDate.getMonth() - sDate.getMonth()) + 1;
+        const yearsCount = Math.trunc(fullMonthesCount / 12);
+        const monthesCount = fullMonthesCount - yearsCount * 12;
+
+        const result = [];
+
+        if (yearsCount) {
+          result.push(yearsCount > 1 ? `${yearsCount} years` : '1 year');
+        }
+
+        if (monthesCount) {
+          result.push(monthesCount > 1 ? `${monthesCount} months` : '1 month');
+        }
+
+        return result.join(' ');
+      }
+    }
+  ) && ''
+}
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -23,7 +53,7 @@
       <section class="cv__experience">
         <h3 class="cv__title">Experience</h3>
         ${scope.jobs.map(job => `
-          <article class="job ${job.isLinkedWithPrevJob ? 'job_with-path' : ''}">
+          <article class="job ${job.isLinkedWithPrevJob ? 'job_with-path' : ''} ${job.isIndirectLink ? 'job_with-dashed-path' : ''}">
             <header class="job__header">
               <h4 class="job__position ${(job.isLinkedWithPrevJob || job.isLinkedWithNextJob) ? 'job__position_with-point' : ''}">${job.position}</h4>
               <h5 class="job__company">
@@ -33,9 +63,10 @@
               </h5>
             </header>
             <section class="job__duration">
-              <time>${job.startDate}</time>
+              <time datetime="${job.startDate}">${scope.utils.formatDate(job.startDate)}</time>
               <span>—</span>
-              <time>${job.finishDate}</time>
+              <time datetime="${job.finishDate}">${scope.utils.formatDate(job.finishDate)}</time>,
+              <span>${scope.utils.formatPeriod(job.startDate, job.finishDate)}</span>
             </section>
             <section class="job__experience">
               ${job.activities.map(activity => `
@@ -65,9 +96,9 @@
               <h5 class="education__establishment">${education.establishment.name}, <a class="link" href="${education.establishment.site.link}">${education.establishment.site.displayLink}</a></h5>
             </header>
             <section class="education__duration">
-              <time>${education.startDate}</time>
+              <time datetime="${education.startDate}">${scope.utils.formatDate(education.startDate)}</time>
               <span>—</span>
-              <time>${education.finishDate}</time>
+              <time datetime="${education.finishDate}">${scope.utils.formatDate(education.finishDate)}</time>
             </section>
           </article>
         `).join('')}
