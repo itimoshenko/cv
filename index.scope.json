@@ -343,8 +343,7 @@
       ]
     },
     {
-      "isLinkedWithPrevJob": true,
-      "isIndirectLink": true,
+      "isLinkedWithNextJob": true,
       "company": {
         "name": "Axbit IT",
         "site": {
@@ -374,7 +373,6 @@
       ]
     },
     {
-      "isLinkedWithNextJob": true,
       "company": {
         "name": "Webzavod",
         "site": {

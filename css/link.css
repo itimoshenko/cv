@@ -19,14 +19,13 @@
 
   display: inline-block;
 
-  margin-right: 4px;
+  margin-right: 6px;
 
-  width: 11px;
-  height: 11px;
+  padding: 6px;
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .link_telegram::before {

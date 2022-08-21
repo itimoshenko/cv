@@ -1,28 +1,23 @@
-html {
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 18px;
-
-  --color-1: #101214;
-  --color-2: #73808D;
-}
-
 @page {
   size: A4;
 
   margin: 0;
 }
 
-@media print {
-  * {
-    page-break-inside: avoid;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  .divider {
-    page-break-before: always;
-  }
+html {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  --color-1: #101214;
+  --color-2: #73808D;
+  --default-indent: 16px 0;
 }
 
 h1, h2, h3, h4, h5, h6, body {
@@ -31,4 +26,26 @@ h1, h2, h3, h4, h5, h6, body {
 
 body {
   color: var(--color-1);
+}
+
+p {
+  margin: 4px 0;
+}
+
+li {
+  position: relative;
+
+  list-style-type: none;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 1px;
+  height: 4px;
+  width: 4px;
+  background-color: var(--color-2);
+  top: 6px;
+  left: -16px;
 }

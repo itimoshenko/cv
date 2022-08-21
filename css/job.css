@@ -1,6 +1,17 @@
+@media print {
+  .job {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
 .job, .education {
   position: relative;
-  padding-bottom: 18px;
+  margin: var(--default-indent);
+}
+
+.job:first-of-type, .education:first-of-type {
+  margin-top: 0;
 }
 
 .job_with-path::before, .education_with-path::before {
@@ -8,7 +19,7 @@
   position: absolute;
   left: -24px;
   top: 9px;
-  height: 100%;
+  height: calc(100% + 18px);
   width: 2px;
   border-left: 2px solid var(--color-2);
 }

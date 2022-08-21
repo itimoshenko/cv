@@ -12,31 +12,26 @@
   opacity: 0.5;
 }
 
-html {
-  font-family: Arial, Helvetica, sans-serif;
-
-  font-weight: 400;
-  font-size: 11px;
-  line-height: 18px;
-
-  --color-1: #101214;
-  --color-2: #73808D;
-}
-
 @page {
   size: A4;
 
   margin: 0;
 }
 
-@media print {
-  * {
-    page-break-inside: avoid;
-  }
+* {
+  box-sizing: border-box;
+}
 
-  .divider {
-    page-break-before: always;
-  }
+html {
+  font-family: Arial, Helvetica, sans-serif;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+
+  --color-1: #101214;
+  --color-2: #73808D;
+  --default-indent: 16px 0;
 }
 
 h1, h2, h3, h4, h5, h6, body {
@@ -45,6 +40,28 @@ h1, h2, h3, h4, h5, h6, body {
 
 body {
   color: var(--color-1);
+}
+
+p {
+  margin: 4px 0;
+}
+
+li {
+  position: relative;
+
+  list-style-type: none;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  display: block;
+  border-radius: 1px;
+  height: 4px;
+  width: 4px;
+  background-color: var(--color-2);
+  top: 6px;
+  left: -16px;
 }
 
 .link {
@@ -68,14 +85,13 @@ body {
 
   display: inline-block;
 
-  margin-right: 4px;
+  margin-right: 6px;
 
-  width: 11px;
-  height: 11px;
+  padding: 6px;
 
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .link_telegram::before {
@@ -106,9 +122,20 @@ body {
   color: var(--color-1);
 }
 
+@media print {
+  .job {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
 .job, .education {
   position: relative;
-  padding-bottom: 18px;
+  margin: var(--default-indent);
+}
+
+.job:first-of-type, .education:first-of-type {
+  margin-top: 0;
 }
 
 .job_with-path::before, .education_with-path::before {
@@ -116,7 +143,7 @@ body {
   position: absolute;
   left: -24px;
   top: 9px;
-  height: 100%;
+  height: calc(100% + 18px);
   width: 2px;
   border-left: 2px solid var(--color-2);
 }
@@ -168,31 +195,35 @@ body {
   color: var(--color-2);
 }
 
+@media print {
+  .cv__skills {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
 .cv {
-  display: grid;
+  display: flex;
 
-
-  grid-template-columns: 2fr 1fr;
-
-  grid-template-areas: "title       ."
-                       "about       additionals"
-                       "experience  additionals"
-                       "education   additionals"
-                       ".           additionals"
-                       ".           additionals"
-                       ".           additionals";
-
-  column-gap: 18px;
+  column-gap: 48px;
 
   padding: 48px;
 
   border-top: 4px solid var(--color-1);
 }
 
-.cv__header {
-  grid-area: title;
+.cv__main {
+  width: 75%;
+  max-width: 660px;
+}
 
-  padding-bottom: 32px;
+.cv__additionals {
+  width: 25%;
+  max-width: 220px;
+}
+
+.cv__header {
+  margin-bottom: 32px;
 
   line-height: 28px;
 }
@@ -216,10 +247,8 @@ body {
   text-transform: uppercase;
 }
 
-.cv__about {
-  padding-bottom: 18px;
-
-  grid-area: about;
+.cv__about, .cv__experience, .cv__education {
+  margin: var(--default-indent);
 }
 
 .cv__introduction {
@@ -228,36 +257,8 @@ body {
   flex-direction: column;
 }
 
-.cv__experience {
-  padding-bottom: 18px;
-
-  grid-area: experience;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.cv__education {
-  padding-bottom: 18px;
-
-  grid-area: education;
-}
-
-.cv__contacts, .cv__preferences {
-  display: flex;
-
-  flex-direction: column;
-
-  padding-bottom: 18px;
-}
-
-.cv__additionals {
-  grid-area: additionals;
-}
-
-.cv__legend, .cv__skills {
-  padding-bottom: 18px;
+.cv__contacts, .cv__legend, .cv__skills {
+  margin: var(--default-indent);
 }
 
 .cv__legend-item {
