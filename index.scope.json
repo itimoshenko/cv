@@ -4,7 +4,7 @@
   "about": [
     [
       "I've got <b class=\"text text_bold\">8+ years of experience</b> in <b class=\"text text_bold\">Frontend Development</b>, two of which I was a <b class=\"text text_bold\">Fullstack Developer</b>.",
-      "I have worked in different subject areas such as medicine, government, construction technology and even betting.",
+      "I have worked in different subject areas such as medicine, construction technology and even betting.",
       "I've <b class=\"text text_bold\">built 20+ SPAs using React</b> and most of them were <b class=\"text text_bold\">from scratch</b>.",
       "Also I've built several <b class=\"text text_bold\">REST services from scratch using NodeJS</b>."
     ],
@@ -56,7 +56,7 @@
   "skills": [
     {
       "name": "Languages",
-      "strong": ["JavaScript (Typescript)", "HTML", "CSS"],
+      "strong": ["JavaScript (TypeScript)", "HTML", "CSS"],
       "medium": ["C#", "SQL"],
       "low": ["Java", "C++"]
     },
